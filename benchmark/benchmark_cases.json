@@ -1,0 +1,709 @@
+﻿{
+  "version": "v1.0",
+  "description": "Benchmark cases for helloagents-trip-planner",
+  "rubric_dimensions": [
+    "constraint_adherence",
+    "itinerary_reasonableness",
+    "scenario_fitness",
+    "recommendation_usefulness",
+    "overall_usability"
+  ],
+  "datasets": [
+    {
+      "name": "Core-10",
+      "goal": "核心回归集，覆盖高频标准场景",
+      "cases": [
+        {
+          "case_id": "core_001",
+          "name": "杭州3天轻松中等预算",
+          "scene_layer": {
+            "city_popularity": "hot",
+            "duration_level": "medium",
+            "constraint_level": "normal",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "杭州",
+            "start_date": "2026-04-10",
+            "end_date": "2026-04-12",
+            "days": 3,
+            "preferences": "历史文化",
+            "budget": "中等",
+            "transportation": "公共交通",
+            "accommodation": "经济型酒店",
+            "pace_preference": "轻松",
+            "safety_preference": "稳妥优先",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 3,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "itinerary_reasonableness",
+            "scenario_fitness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "core_002",
+          "name": "杭州5天经济平衡行程",
+          "scene_layer": {
+            "city_popularity": "hot",
+            "duration_level": "medium",
+            "constraint_level": "normal",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "杭州",
+            "start_date": "2026-04-15",
+            "end_date": "2026-04-19",
+            "days": 5,
+            "preferences": "城市漫游",
+            "budget": "经济",
+            "transportation": "公共交通",
+            "accommodation": "民宿",
+            "pace_preference": "平衡",
+            "safety_preference": "常规即可",
+            "night_preference": "适度夜游"
+          },
+          "auto_checks": {
+            "must_have_days": 5,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "scenario_fitness",
+            "recommendation_usefulness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "core_003",
+          "name": "成都4天公共交通中等预算",
+          "scene_layer": {
+            "city_popularity": "hot",
+            "duration_level": "medium",
+            "constraint_level": "normal",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "成都",
+            "start_date": "2026-05-06",
+            "end_date": "2026-05-09",
+            "days": 4,
+            "preferences": "美食休闲",
+            "budget": "中等",
+            "transportation": "公共交通",
+            "accommodation": "商务酒店",
+            "pace_preference": "轻松",
+            "safety_preference": "稳妥优先",
+            "night_preference": "适度夜游"
+          },
+          "auto_checks": {
+            "must_have_days": 4,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "itinerary_reasonableness",
+            "recommendation_usefulness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "core_004",
+          "name": "北京3天紧凑经济行程",
+          "scene_layer": {
+            "city_popularity": "hot",
+            "duration_level": "short",
+            "constraint_level": "normal",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "北京",
+            "start_date": "2026-06-12",
+            "end_date": "2026-06-14",
+            "days": 3,
+            "preferences": "历史文化",
+            "budget": "经济",
+            "transportation": "公共交通",
+            "accommodation": "经济型酒店",
+            "pace_preference": "紧凑",
+            "safety_preference": "常规即可",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 3,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "itinerary_reasonableness",
+            "scenario_fitness"
+          ]
+        },
+        {
+          "case_id": "core_005",
+          "name": "上海2天豪华夜生活体验",
+          "scene_layer": {
+            "city_popularity": "hot",
+            "duration_level": "short",
+            "constraint_level": "normal",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "上海",
+            "start_date": "2026-07-03",
+            "end_date": "2026-07-04",
+            "days": 2,
+            "preferences": "都市夜景",
+            "budget": "豪华",
+            "transportation": "打车",
+            "accommodation": "精品酒店",
+            "pace_preference": "轻松",
+            "safety_preference": "愿意夜间活动",
+            "night_preference": "夜生活体验"
+          },
+          "auto_checks": {
+            "must_have_days": 2,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "scenario_fitness",
+            "recommendation_usefulness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "core_006",
+          "name": "苏州2天轻松稳妥优先",
+          "scene_layer": {
+            "city_popularity": "medium",
+            "duration_level": "short",
+            "constraint_level": "normal",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "苏州",
+            "start_date": "2026-04-20",
+            "end_date": "2026-04-21",
+            "days": 2,
+            "preferences": "园林文化",
+            "budget": "中等",
+            "transportation": "公共交通",
+            "accommodation": "民宿",
+            "pace_preference": "轻松",
+            "safety_preference": "稳妥优先",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 2,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "itinerary_reasonableness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "core_007",
+          "name": "西安5天历史文化豪华游",
+          "scene_layer": {
+            "city_popularity": "medium",
+            "duration_level": "medium",
+            "constraint_level": "normal",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "西安",
+            "start_date": "2026-05-10",
+            "end_date": "2026-05-14",
+            "days": 5,
+            "preferences": "历史文化",
+            "budget": "豪华",
+            "transportation": "打车",
+            "accommodation": "精品酒店",
+            "pace_preference": "平衡",
+            "safety_preference": "常规即可",
+            "night_preference": "适度夜游"
+          },
+          "auto_checks": {
+            "must_have_days": 5,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "recommendation_usefulness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "core_008",
+          "name": "扬州2天冷门城市标准场景",
+          "scene_layer": {
+            "city_popularity": "cold",
+            "duration_level": "short",
+            "constraint_level": "normal",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "扬州",
+            "start_date": "2026-04-08",
+            "end_date": "2026-04-09",
+            "days": 2,
+            "preferences": "休闲美食",
+            "budget": "中等",
+            "transportation": "公共交通",
+            "accommodation": "民宿",
+            "pace_preference": "轻松",
+            "safety_preference": "稳妥优先",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 2,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "recommendation_usefulness",
+            "scenario_fitness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "core_009",
+          "name": "景德镇3天手作文化行",
+          "scene_layer": {
+            "city_popularity": "cold",
+            "duration_level": "medium",
+            "constraint_level": "normal",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "景德镇",
+            "start_date": "2026-06-01",
+            "end_date": "2026-06-03",
+            "days": 3,
+            "preferences": "非遗文化",
+            "budget": "中等",
+            "transportation": "公共交通",
+            "accommodation": "民宿",
+            "pace_preference": "平衡",
+            "safety_preference": "常规即可",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 3,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "scenario_fitness",
+            "recommendation_usefulness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "core_010",
+          "name": "桂林4天山水平衡行程",
+          "scene_layer": {
+            "city_popularity": "medium",
+            "duration_level": "medium",
+            "constraint_level": "normal",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "桂林",
+            "start_date": "2026-10-10",
+            "end_date": "2026-10-13",
+            "days": 4,
+            "preferences": "自然风光",
+            "budget": "中等",
+            "transportation": "公共交通",
+            "accommodation": "商务酒店",
+            "pace_preference": "平衡",
+            "safety_preference": "稳妥优先",
+            "night_preference": "适度夜游"
+          },
+          "auto_checks": {
+            "must_have_days": 4,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "itinerary_reasonableness",
+            "overall_usability"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stress-5",
+      "goal": "边界与复杂场景集",
+      "cases": [
+        {
+          "case_id": "stress_001",
+          "name": "北京14天长行程压力测试",
+          "scene_layer": {
+            "city_popularity": "hot",
+            "duration_level": "long",
+            "constraint_level": "high",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "北京",
+            "start_date": "2026-08-01",
+            "end_date": "2026-08-14",
+            "days": 14,
+            "preferences": "历史文化",
+            "budget": "豪华",
+            "transportation": "打车",
+            "accommodation": "精品酒店",
+            "pace_preference": "紧凑",
+            "safety_preference": "愿意夜间活动",
+            "night_preference": "夜生活体验"
+          },
+          "auto_checks": {
+            "must_have_days": 14,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "itinerary_reasonableness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "stress_002",
+          "name": "上海1天极短行程",
+          "scene_layer": {
+            "city_popularity": "hot",
+            "duration_level": "short",
+            "constraint_level": "high",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "上海",
+            "start_date": "2026-09-12",
+            "end_date": "2026-09-12",
+            "days": 1,
+            "preferences": "城市速览",
+            "budget": "中等",
+            "transportation": "打车",
+            "accommodation": "商务酒店",
+            "pace_preference": "轻松",
+            "safety_preference": "稳妥优先",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 1,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "itinerary_reasonableness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "stress_003",
+          "name": "重庆低预算紧凑早归冲突组合",
+          "scene_layer": {
+            "city_popularity": "medium",
+            "duration_level": "medium",
+            "constraint_level": "high",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "重庆",
+            "start_date": "2026-05-20",
+            "end_date": "2026-05-24",
+            "days": 5,
+            "preferences": "城市夜景",
+            "budget": "经济",
+            "transportation": "公共交通",
+            "accommodation": "民宿",
+            "pace_preference": "紧凑",
+            "safety_preference": "稳妥优先",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 5,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "scenario_fitness",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "stress_004",
+          "name": "洛阳豪华但经济型酒店矛盾场景",
+          "scene_layer": {
+            "city_popularity": "cold",
+            "duration_level": "medium",
+            "constraint_level": "high",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "洛阳",
+            "start_date": "2026-04-25",
+            "end_date": "2026-04-28",
+            "days": 4,
+            "preferences": "历史文化",
+            "budget": "豪华",
+            "transportation": "公共交通",
+            "accommodation": "经济型酒店",
+            "pace_preference": "轻松",
+            "safety_preference": "稳妥优先",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 4,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "recommendation_usefulness",
+            "scenario_fitness"
+          ]
+        },
+        {
+          "case_id": "stress_005",
+          "name": "泉州7天冷门长行程",
+          "scene_layer": {
+            "city_popularity": "cold",
+            "duration_level": "long",
+            "constraint_level": "high",
+            "execution_path": "main"
+          },
+          "input": {
+            "city": "泉州",
+            "start_date": "2026-11-01",
+            "end_date": "2026-11-07",
+            "days": 7,
+            "preferences": "宗教文化",
+            "budget": "中等",
+            "transportation": "公共交通",
+            "accommodation": "民宿",
+            "pace_preference": "平衡",
+            "safety_preference": "常规即可",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 7,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "recommendation_usefulness",
+            "itinerary_reasonableness",
+            "overall_usability"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fallback-3",
+      "goal": "降级与异常能力集",
+      "cases": [
+        {
+          "case_id": "fallback_001",
+          "name": "无LLM key 的杭州3天场景",
+          "scene_layer": {
+            "city_popularity": "hot",
+            "duration_level": "medium",
+            "constraint_level": "normal",
+            "execution_path": "fallback"
+          },
+          "env_overrides": {
+            "disable_llm": true
+          },
+          "input": {
+            "city": "杭州",
+            "start_date": "2026-04-10",
+            "end_date": "2026-04-12",
+            "days": 3,
+            "preferences": "历史文化",
+            "budget": "中等",
+            "transportation": "公共交通",
+            "accommodation": "经济型酒店",
+            "pace_preference": "轻松",
+            "safety_preference": "稳妥优先",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 3,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "expect_fallback": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "constraint_adherence",
+            "overall_usability"
+          ]
+        },
+        {
+          "case_id": "fallback_002",
+          "name": "天气服务失败的成都4天场景",
+          "scene_layer": {
+            "city_popularity": "hot",
+            "duration_level": "medium",
+            "constraint_level": "normal",
+            "execution_path": "partial_degradation"
+          },
+          "env_overrides": {
+            "mock_weather_failure": true
+          },
+          "input": {
+            "city": "成都",
+            "start_date": "2026-05-06",
+            "end_date": "2026-05-09",
+            "days": 4,
+            "preferences": "美食休闲",
+            "budget": "中等",
+            "transportation": "公共交通",
+            "accommodation": "商务酒店",
+            "pace_preference": "轻松",
+            "safety_preference": "稳妥优先",
+            "night_preference": "适度夜游"
+          },
+          "auto_checks": {
+            "must_have_days": 4,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "overall_usability",
+            "constraint_adherence"
+          ]
+        },
+        {
+          "case_id": "fallback_003",
+          "name": "全部外部服务失败的嘉兴3天场景",
+          "scene_layer": {
+            "city_popularity": "cold",
+            "duration_level": "medium",
+            "constraint_level": "high",
+            "execution_path": "full_degradation"
+          },
+          "env_overrides": {
+            "disable_llm": true,
+            "mock_weather_failure": true,
+            "mock_amap_failure": true,
+            "mock_unsplash_failure": true
+          },
+          "input": {
+            "city": "嘉兴",
+            "start_date": "2026-09-20",
+            "end_date": "2026-09-22",
+            "days": 3,
+            "preferences": "水乡古镇",
+            "budget": "经济",
+            "transportation": "公共交通",
+            "accommodation": "民宿",
+            "pace_preference": "轻松",
+            "safety_preference": "稳妥优先",
+            "night_preference": "早归休息"
+          },
+          "auto_checks": {
+            "must_have_days": 3,
+            "must_have_weather": true,
+            "must_have_budget": true,
+            "must_have_hotel": true,
+            "must_have_meals": true,
+            "expect_fallback": true,
+            "min_attractions_per_day": 1,
+            "min_meals_per_day": 1
+          },
+          "rubric_focus": [
+            "overall_usability"
+          ]
+        }
+      ]
+    }
+  ]
+}
