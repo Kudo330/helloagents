@@ -9,7 +9,7 @@ interface ErrorResponse {
 }
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_BASE_URL || '/api',
   timeout: 180000,
   headers: {
     'Content-Type': 'application/json'
